@@ -1,0 +1,37 @@
+@prefix pat: <http://dilab77.ionio.gr/swp/patiniotis/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pat:Proffessor rdf:type rdfs:Class .
+pat:Lesson rdf:type rdfs:Class .
+pat:Classroom rdf:type rdfs:Class .
+pat:Lecture rdf:type rdfs:Class .
+
+pat:Proffessor rdfs:subClassOf foaf:Person .
+
+pat:paradosimathimatos rdf:type rdf:Property .
+pat:didasketaiapo rdf:type rdf:Property .
+pat:ginetaiStinAithousa rdf:type rdf:Property .
+pat:enarksi rdf:type rdf:Property .
+pat:liksi rdf:type rdf:Property .
+pat:meramathimatos rdf:type rdf:Property .
+
+pat:paradosimathimatos rdfs:domain pat:Lecture .
+pat:paradosimathimatos rdfs:range pat:Lesson .
+
+pat:didasketaiapo rdfs:domain pat:Lecture .
+pat:didasketaiapo rdfs:range pat:Proffessor .
+
+pat:ginetaiStinAithousa rdfs:domain pat:Lecture .
+pat:ginetaiStinAithousa rdfs:range pat:Classroom .
+
+pat:enarksi rdfs:domain pat:Lecture .
+pat:enarksi rdfs:range xsd:Time .
+
+pat:liksi rdfs:domain pat:Lecture .
+pat:liksi rdfs:range xsd:Time .
+
+pat:meramathimatos rdfs:domain pat:Lecture .
+pat:meramathimatos rdfs:range rdfs:Literal .
